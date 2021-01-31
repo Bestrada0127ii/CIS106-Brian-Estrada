@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-30 01:36:20 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMjU7MDU6Mzg6NDIgUE07Mjg5Mw=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMzA7MDE6MzY6MjAgUE07MTsyOTg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Integer" array="False" size=""/>
+            <declare name="num2" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="sub" type="Integer" array="False" size=""/>
+            <declare name="mult" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input a number&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Input second number&quot;" newline="True"/>
+            <input variable="num2"/>
+            <assign variable="sum" expression="num1 + num2"/>
+            <assign variable="sub" expression="num1 - num2"/>
+            <assign variable="mult" expression="num1 * num2"/>
+            <output expression="&quot;The sum is &quot; &amp; sum" newline="True"/>
+            <output expression="&quot;The difference is &quot; &amp; sub" newline="True"/>
+            <output expression="&quot;The multiple is &quot; &amp; mult" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

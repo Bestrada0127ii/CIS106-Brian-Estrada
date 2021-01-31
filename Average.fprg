@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-30 03:43:19 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMzA7MDI6MjY6MDkgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMzA7MDM6NDM6MTkgUE07MTsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="exam1" type="Integer" array="False" size=""/>
+            <declare name="exam2" type="Integer" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter last name&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;First score&quot;" newline="True"/>
+            <input variable="exam1"/>
+            <output expression="&quot;Second score&quot;" newline="True"/>
+            <input variable="exam2"/>
+            <assign variable="average" expression="(exam1 + exam2)/2"/>
+            <output expression="&quot;Your average is &quot; &amp; average" newline="True"/>
+            <output expression="&quot;Last name:&quot; &amp; lastname" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

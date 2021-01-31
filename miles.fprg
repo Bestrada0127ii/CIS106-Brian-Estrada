@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-30 04:38:24 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMzA7MDM6NDM6NDAgUE07Mjg4MQ=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDEtMzA7MDQ6Mzg6MjQgUE07NjszMDAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="miles" type="Integer" array="False" size=""/>
+            <declare name="gallons" type="Integer" array="False" size=""/>
+            <declare name="mpergall" type="Integer" array="False" size=""/>
+            <output expression="&quot;Input miles traveled&quot;" newline="True"/>
+            <input variable="miles"/>
+            <output expression="&quot;Gallons used&quot;" newline="True"/>
+            <input variable="gallons"/>
+            <assign variable="mpergall" expression="miles / gallons"/>
+            <output expression="mpergall &amp; &quot; miles per gallon&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

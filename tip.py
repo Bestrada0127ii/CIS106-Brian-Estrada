@@ -1,0 +1,6 @@
+print("How much is the bill?")
+total = int(input())
+print("tip percentage?")
+tip = int(input())
+tipamount = total * (tip * 0.01)
+print("Your tip is " + str(tipamount))
