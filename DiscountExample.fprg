@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-03 09:44:17 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDM7MDU6NTY6MjYgUE07Mjg5Mg=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDM7MDk6NDQ6MTcgUE07MjszMDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="discounted" type="Real" array="False" size=""/>
+            <declare name="final" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the price of the item&quot;" newline="True"/>
+            <input variable="price"/>
+            <output expression="&quot;What is the discount percentage?&quot;" newline="True"/>
+            <input variable="discount"/>
+            <assign variable="discounted" expression="(discount * .01) * price"/>
+            <output expression="&quot;Your discount was &quot; &amp; discounted" newline="True"/>
+            <assign variable="final" expression="price - discounted"/>
+            <output expression="&quot;Final price after discount is &quot; &amp; final" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
