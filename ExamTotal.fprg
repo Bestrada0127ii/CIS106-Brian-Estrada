@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-03 05:40:51 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDM7MDU6MTk6NTIgUE07Mjg5MA=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDM7MDU6NDA6NTEgUE07MTsyOTkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="exam1" type="Integer" array="False" size=""/>
+            <declare name="exam2" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <output expression="&quot;What grade did you get for exam 1?(60)&quot;" newline="True"/>
+            <input variable="exam1"/>
+            <output expression="&quot;What grade did you get for exam 2?(40)&quot;" newline="True"/>
+            <input variable="exam2"/>
+            <assign variable="total" expression="((60* exam1)+(40*exam2))/(60+40)"/>
+            <output expression="&quot;Your final grade is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

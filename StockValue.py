@@ -1,0 +1,6 @@
+print("What is the current stock price?")
+price = float(input())
+print("Quanity of the stocks?")
+quantity = float(input())
+value = (price * quantity)
+print("The current value of the stock is " , float (value), "$")

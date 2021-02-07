@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-05 07:13:18 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDU7MDM6MTk6NDMgUE07Mjg5MA=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMDU7MDc6MTM6MTggUE07MTsyOTk4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="stockprice" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the current stock price?&quot;" newline="True"/>
+            <input variable="stockprice"/>
+            <output expression="&quot;what is the quantity of the stocks&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <assign variable="value" expression="stockprice * quantity"/>
+            <output expression="&quot;The value is &quot; &amp; value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
