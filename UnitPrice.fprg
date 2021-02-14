@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-13 09:09:13 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTA7MDQ6NDI6MzIgUE07Mjg4MQ=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTM7MDk6MDk6MTMgUE07NzszMDA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="itemA" type="String" array="False" size=""/>
+            <declare name="itemB" type="String" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="unitPrice" type="Integer" array="False" size=""/>
+            <declare name="choosedItem" type="String" array="False" size=""/>
+            <output expression="&quot;Choose type of item&quot;" newline="True"/>
+            <input variable="choosedItem"/>
+            <output expression="&quot;quantity?&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="choosedItem = &quot;A&quot;">
+                <then>
+                    <output expression="quantity * 10" newline="True"/>
+                </then>
+                <else>
+                    <output expression="quantity * 20" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

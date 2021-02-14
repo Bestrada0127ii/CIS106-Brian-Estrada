@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-12 12:07:48 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTE7MDk6NTM6MjMgUE07Mjg4OQ=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTI7MTI6MDc6NDggUE07MjsyOTk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of books to order&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <output expression="&quot;cost per book&quot;" newline="True"/>
+            <input variable="price"/>
+            <assign variable="total" expression="price * quantity"/>
+            <if expression="total &lt;= 50">
+                <then>
+                    <output expression="&quot;shipping is 25$&quot;" newline="True"/>
+                    <output expression="&quot;Your total is: &quot; &amp; total + 25" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;shipping is free, Your total is &quot; &amp; total" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

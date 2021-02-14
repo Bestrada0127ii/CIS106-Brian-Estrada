@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-13 03:41:13 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTI7MTI6MDc6NTMgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTM7MDM6NDE6MTMgUE07MzsyOTkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="appliance" type="String" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="totalPrice" type="Real" array="False" size=""/>
+            <output expression="&quot;What is the name of the appliance?&quot;" newline="True"/>
+            <input variable="appliance"/>
+            <output expression="&quot;What is price of the &quot; &amp; appliance &amp; &quot;:&quot;" newline="True"/>
+            <input variable="price"/>
+            <if expression="price &gt; 1000">
+                <then>
+                    <assign variable="tax" expression="(10* price)/100"/>
+                    <assign variable="totalPrice" expression="tax + price"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="(5* price)/100"/>
+                    <assign variable="totalPrice" expression="tax + price"/>
+                </else>
+            </if>
+            <output expression="&quot;Your chosen appliance is: &quot; &amp; appliance" newline="True"/>
+            <output expression="&quot;The tax cost is: &quot; &amp; tax" newline="True"/>
+            <output expression="&quot;The final price is: &quot;&amp;totalPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
