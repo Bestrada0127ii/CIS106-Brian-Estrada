@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-18 03:04:59 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTg7MDI6NTc6NTEgUE07Mjg5NA=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMTg7MDM6MDQ6NTkgUE07MTszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ticket" type="Integer" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Tickets?&quot;" newline="True"/>
+            <input variable="ticket"/>
+            <if expression="ticket &gt;= 25">
+                <then>
+                    <assign variable="price" expression="50"/>
+                    <assign variable="total" expression="ticket * price"/>
+                </then>
+                <else>
+                    <if expression="ticket &gt;= 10 and ticket &lt;= 24">
+                        <then>
+                            <assign variable="price" expression="60"/>
+                            <assign variable="total" expression="ticket * price"/>
+                        </then>
+                        <else>
+                            <if expression="ticket &gt;=5 and ticket &lt;= 9">
+                                <then>
+                                    <assign variable="price" expression="70"/>
+                                    <assign variable="total" expression="ticket * price"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="75"/>
+                                    <assign variable="total" expression="ticket * price"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;# of tickets: &quot; &amp; ticket" newline="True"/>
+            <output expression="&quot;the price of a ticket is:&quot; &amp; price" newline="True"/>
+            <output expression="&quot;The total is: &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
