@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-26 12:08:43 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjU7MDk6MDM6MTcgUE07Mjg5Mg=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjY7MTI6MDg6NDMgUE07NDszMDAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="hits" type="Integer" array="False" size=""/>
+            <declare name="bats" type="Integer" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <output expression="&quot;Name?&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Number of at-bats?&quot;" newline="True"/>
+            <input variable="bats"/>
+            <output expression="&quot;Number of hits?&quot;" newline="True"/>
+            <input variable="hits"/>
+            <output expression="&quot;Name: &quot; &amp; name" newline="True"/>
+            <assign variable="average" expression="calculate(hits, bats)"/>
+            <output expression="&quot;Batting Average: &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+    <function name="calculate" type="Real" variable="average">
+        <parameters>
+            <parameter name="hits" type="Integer" array="False"/>
+            <parameter name="bats" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="average" expression="hits / bats"/>
+        </body>
+    </function>
+</flowgorithm>

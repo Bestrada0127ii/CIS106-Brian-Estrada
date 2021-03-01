@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-28 06:00:13 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjc7MTA6NDI6MzIgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjg7MDY6MDA6MTMgUE07NDsyOTk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="creditHours" type="Real" array="False" size=""/>
+            <declare name="districtCode" type="String" array="False" size=""/>
+            <declare name="tuiton" type="Real" array="False" size=""/>
+            <output expression="&quot;Last name?&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Credit hours?&quot;" newline="True"/>
+            <input variable="creditHours"/>
+            <output expression="&quot;District code?&quot;" newline="True"/>
+            <input variable="districtCode"/>
+            <assign variable="tuiton" expression="compute(creditHours, districtCode)"/>
+            <output expression="tuiton" newline="True"/>
+        </body>
+    </function>
+    <function name="compute" type="Real" variable="tuiton">
+        <parameters>
+            <parameter name="creditHours" type="Real" array="False"/>
+            <parameter name="districtCode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuiton" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <if expression="districtCode == &quot;O&quot;">
+                <then>
+                    <assign variable="price" expression="250"/>
+                    <assign variable="tuiton" expression="price * creditHours"/>
+                </then>
+                <else>
+                    <assign variable="price" expression="550"/>
+                    <assign variable="tuiton" expression="price * creditHours"/>
+                </else>
+            </if>
+            <output expression="tuiton" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

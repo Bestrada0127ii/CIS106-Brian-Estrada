@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-27 03:46:47 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjY7MTI6MTI6MDEgUE07Mjg4MA=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjc7MDM6NDY6NDcgUE07MTszMDA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="city" type="String" array="False" size=""/>
+            <declare name="miles" type="Real" array="False" size=""/>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;City?&quot;" newline="True"/>
+            <input variable="city"/>
+            <output expression="&quot;Miles traveled?&quot;" newline="True"/>
+            <input variable="miles"/>
+            <output expression="&quot;Gallanos used?&quot;" newline="True"/>
+            <input variable="gallons"/>
+            <assign variable="total" expression="compute(gallons)"/>
+            <output expression="&quot;Destination: &quot; &amp; city" newline="True"/>
+            <output expression="&quot;Miles: &quot; &amp; miles" newline="True"/>
+            <output expression="&quot;Cost of gallons is: &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+    <function name="compute" type="Real" variable="total">
+        <parameters>
+            <parameter name="gallons" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="2.5"/>
+            <assign variable="total" expression="cost* gallons"/>
+        </body>
+    </function>
+</flowgorithm>

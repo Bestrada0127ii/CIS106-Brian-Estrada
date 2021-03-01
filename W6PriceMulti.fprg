@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-02-25 09:03:13 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjQ7MTA6MDQ6MzggUE07Mjg4Nw=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDItMjU7MDk6MDM6MTMgUE07MTsyOTk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="finaltotal" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <output expression="&quot;Quantity?&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <output expression="&quot;Price&quot;" newline="True"/>
+            <input variable="price"/>
+            <assign variable="finaltotal" expression="calculate(quantity, price)"/>
+            <output expression="finalTotal" newline="True"/>
+        </body>
+    </function>
+    <function name="calculate" type="Real" variable="finaltotal">
+        <parameters>
+            <parameter name="quantity" type="Real" array="False"/>
+            <parameter name="price" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="finaltotal" type="Real" array="False" size=""/>
+            <assign variable="total" expression="quantity * price"/>
+            <if expression="total &gt; 10000">
+                <then>
+                    <assign variable="finaltotal" expression="total - (total *10 /100)"/>
+                </then>
+                <else>
+                    <assign variable="finaltotal" expression="total"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
