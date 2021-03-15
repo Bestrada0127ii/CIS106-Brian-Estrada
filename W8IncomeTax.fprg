@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-13 08:26:30 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTM7MDc6NDc6MTQgUE07Mjg5Mw=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTM7MDg6MTk6NDEgUE07MTtlc3RyYTtERVNLVE9QLTRPRFJCREk7MjAyMS0wMy0xMzswNzo0NzoxNCBQTTtXOFF1YW50aXR5UmVwZWF0LmZwcmc7ODEwNA=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTM7MDg6MjY6MzAgUE07NDszMDAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <declare name="grossIncome" type="Real" array="False" size=""/>
+            <declare name="taxOwed" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="deduction" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to compute income tax?&quot;" newline="True"/>
+            <input variable="repeat"/>
+            <while expression="repeat = &quot;Yes&quot; or repeat = &quot;yes&quot;">
+                <output expression="&quot;enter income tax&quot;" newline="True"/>
+                <input variable="grossincome"/>
+                <assign variable="tax" expression="comp(grossincome)"/>
+                <output expression="&quot;Gross income: &quot; &amp; grossincome" newline="True"/>
+                <output expression="&quot;Tax: &quot; &amp; tax" newline="True"/>
+                <assign variable="deduction" expression="tax * grossincome"/>
+                <assign variable="taxOwed" expression="grossincome - deduction"/>
+                <output expression="&quot;Tax owed: &quot; &amp; taxOwed" newline="True"/>
+                <output expression="&quot;Again?&quot;" newline="True"/>
+                <input variable="repeat"/>
+            </while>
+            <output expression="&quot;Bye&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="comp" type="Real" variable="tax">
+        <parameters>
+            <parameter name="grossincome" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <if expression="grossincome &gt; 500000">
+                <then>
+                    <assign variable="tax" expression=".30"/>
+                </then>
+                <else>
+                    <if expression="grossincome &gt; 200000">
+                        <then>
+                            <assign variable="tax" expression=".20"/>
+                        </then>
+                        <else>
+                            <assign variable="tax" expression=".15"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

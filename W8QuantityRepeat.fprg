@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-13 07:47:11 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTI7MDU6MTY6NTAgUE07Mjg4Ng=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTM7MDc6NDc6MTEgUE07NDszMDAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="extendedPrice" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="discounted" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <output expression="&quot;Yes or no?&quot;" newline="True"/>
+            <input variable="repeat"/>
+            <while expression="repeat == &quot;Yes&quot; or repeat == &quot;yes&quot;">
+                <output expression="&quot;Item?&quot;" newline="True"/>
+                <input variable="item"/>
+                <output expression="&quot;Price?&quot;" newline="True"/>
+                <input variable="Price"/>
+                <output expression="&quot;Quantity?&quot;" newline="True"/>
+                <input variable="quantity"/>
+                <assign variable="extendedPrice" expression="quantity * price"/>
+                <if expression="extendedPrice &gt; 10000">
+                    <then>
+                        <assign variable="discount" expression=".10 * extendedPrice"/>
+                    </then>
+                    <else>
+                        <if expression="extendedPrice &gt; 5000">
+                            <then>
+                                <assign variable="discount" expression=".05 * extendedPrice"/>
+                            </then>
+                            <else>
+                                <assign variable="discount" expression=".02 * extendedPrice"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="discounted" expression="extendedPrice - discount"/>
+                <assign variable="tax" expression=".07 * discounted + discounted"/>
+                <output expression="&quot;Extended Price: &quot; &amp; extendedPrice" newline="True"/>
+                <output expression="&quot;Discount: &quot; &amp; discount" newline="True"/>
+                <output expression="&quot;Discounted:&quot; &amp; discounted" newline="True"/>
+                <output expression="&quot;Tax: &quot; &amp; tax" newline="True"/>
+                <output expression="&quot;Again?&quot;" newline="True"/>
+                <input variable="repeat"/>
+            </while>
+            <output expression="&quot;Bye&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

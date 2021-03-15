@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-14 06:37:57 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTI7MTE6MzA6NTkgQU07Mjg3Mw=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTQ7MDY6Mzc6NTcgUE07MjszMDA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="examOne" type="Real" array="False" size=""/>
+            <declare name="examTwo" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <output expression="&quot;yes or now?&quot;" newline="True"/>
+            <input variable="repeat"/>
+            <if expression="repeat == &quot;yes&quot; or repeat == &quot;Yes&quot;">
+                <then>
+                    <while expression="repeat == &quot;yes&quot; or repeat == &quot;Yes&quot;">
+                        <output expression="&quot;Last name?&quot;" newline="True"/>
+                        <input variable="lastName"/>
+                        <output expression="&quot;Exam score one?&quot;" newline="True"/>
+                        <input variable="examOne"/>
+                        <output expression="&quot;Exam score two?&quot;" newline="True"/>
+                        <input variable="examTwo"/>
+                        <assign variable="average" expression="examOne + examTwo / 2"/>
+                        <output expression="&quot;Last Name: &quot; &amp; lastName" newline="True"/>
+                        <output expression="&quot;The average is &quot; &amp; average" newline="True"/>
+                        <output expression="&quot;Again?&quot;" newline="True"/>
+                        <input variable="repeat"/>
+                    </while>
+                    <output expression="&quot;bye&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bye&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-11 09:45:53 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTE7MDk6MjQ6MDkgUE07Mjg5Mg=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTE7MDk6NDU6NTMgUE07MjszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="1"/>
+            <while expression="counter &lt;=25">
+                <output expression="counter" newline="True"/>
+                <assign variable="counter" expression="counter + 1"/>
+                <if expression="counter % 2 = 1">
+                    <then>
+                        <output expression="counter" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="counter" expression="counter + 1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

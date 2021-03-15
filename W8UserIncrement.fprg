@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="estra"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-03-11 10:03:37 PM"/>
+        <attribute name="created" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTE7MDk6NDg6MjEgUE07Mjg5Mg=="/>
+        <attribute name="edited" value="ZXN0cmE7REVTS1RPUC00T0RSQkRJOzIwMjEtMDMtMTE7MTA6MDM6MzcgUE07MTsyOTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="last" type="Integer" array="False" size=""/>
+            <declare name="initial" type="Integer" array="False" size=""/>
+            <output expression="&quot;Initial number?&quot;" newline="True"/>
+            <input variable="initial"/>
+            <output expression="&quot;Last Number?&quot;" newline="True"/>
+            <input variable="last"/>
+            <while expression="initial &gt;= 0 and initial &lt;= last">
+                <output expression="initial" newline="True"/>
+                <assign variable="initial" expression="initial + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
